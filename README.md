@@ -1,10 +1,10 @@
 # atividade-java-jwt
 
-## end-points
+### End-points
 
+## POST - http://localhost:8081/users
 
-
-POST - http://localhost:8081/users
+<pre>
 body:
 {
     "email": "teste@email.com",
@@ -12,19 +12,23 @@ body:
     "username": "TESTE",
     "role": "ROLE_ADMIN" ou "ROLE_USER"
 }
+</pre>
 
-POST - whttp://localhost:8081/users/login
+## POST - http://localhost:8081/users/login
+<pre>
 body:
 {
     "email": "teste@email.com",
     "password": "123456789",
     "username": "TESTE",
 }
+</pre>
 
-GET - http://localhost:8081/users/test
+## GET - http://localhost:8081/users/test
+<pre>
 header: 
 {
-  "Authorization": "Bearer <Token JWT>"
+  "Authorization": "Bearer TokenJWT"
 }
 body:
 {
@@ -32,12 +36,14 @@ body:
     "password": "123456789",
     "username": "TESTE",
 }
+</pre>
 
 Rota role_user
-GET - http://localhost:8081/users/test/user
+## GET - http://localhost:8081/users/test/user
+<pre>
 header: 
 {
-  "Authorization": "Bearer <Token JWT>"
+  "Authorization": "Bearer <\Token JWT>\"
 }
 body:
 {
@@ -45,12 +51,14 @@ body:
     "password": "123456789",
     "username": "TESTE",
 }
-
+</pre>
+  
 Rota role_admin
-http://localhost:8081/users/test/admin
+## GET - http://localhost:8081/users/test/admin
+<pre>
 header: 
 {
-  "Authorization": "Bearer <Token JWT>"
+  "Authorization": "Bearer (Token JWT)"
 }
 body:
 {
@@ -58,3 +66,4 @@ body:
     "password": "123456789",
     "username": "TESTE",
 }
+</pre>
